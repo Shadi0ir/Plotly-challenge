@@ -98,6 +98,7 @@ function getIdNo(id){
     
     })
 }
+//Create function to change the event
 function optionChanged(id) {
     designPlot(id);
     getIdNo(id);
