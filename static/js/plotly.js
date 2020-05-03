@@ -70,13 +70,30 @@ function designPlot(id){
         };
   
         // creating data variable 
-        var bubbleData= [bubble];
+        let bubbleData= [bubble];
   
         // create the bubble plot
         Plotly.newPlot("bubble", bubbleData, layout_b); 
 
-        Plotly.newPlot( data, layout);
 
+
+// create the 
+let gaugeData = [
+	{
+		domain: { x: [0, 10], y: [0, 10] },
+		value: 10,
+		title: { text: "Belly Button Washing Frequency" },
+		type: "indicator",
+        mode: "gauge+number",
+        gauge: {
+            axis: { range: [null, 10] },
+    }
+}
+];
+
+var layout = { width: 650, height: 500, margin: { t: 0, b: 0 } };
+
+    Plotly.newPlot('gauge', gaugeData, layout);
 
     });
 }
